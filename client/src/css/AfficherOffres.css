@@ -1,0 +1,59 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(45deg, white, white);
+    font-family: sans-serif;
+    font-weight: 100;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start; /* Aligne le tableau à gauche */
+    align-items: flex-start; /* Aligne le tableau au début de la page */
+    padding-left: 180px; /* Réduit la valeur pour déplacer le tableau plus à gauche */
+    width: 100%;
+    box-sizing: border-box; /* Inclut le padding dans la largeur totale */
+}
+
+table {
+    width: 100%; /* Utilise 100% de l'espace disponible */
+    max-width: 100%; /* Assure que le tableau ne dépasse pas la largeur de la page */
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Réduit l'ombre du tableau */
+    border: 1px solid #000; /* Réduit l'épaisseur de la bordure */
+    overflow-x: auto; /* Assure que le tableau est défilable horizontalement si nécessaire */
+    margin-left: 1px; /* Ajoute une marge à gauche pour un léger décalage supplémentaire */
+}
+
+th, td {
+    padding: 8px; /* Réduit le padding des cellules */
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #000;
+    border-right: 1px solid #000; /* Ajoute une bordure droite aux cellules */
+    border-bottom: 1px solid #000; /* Ajoute une bordure en bas aux cellules */
+}
+
+th {
+    text-align: left;
+    border-right: 1px solid #000; /* Ajoute une bordure droite aux en-têtes */
+}
+
+thead th {
+    background-color: #0ea6f8;
+    border-bottom: 2px solid #000; /* Ajoute une bordure plus épaisse en bas des en-têtes */
+}
+
+tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+tbody td:hover:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -9999px;
+    bottom: -9999px;
+    background-color: rgba(255, 255, 255, 0.2);
+    z-index: -1;
+}

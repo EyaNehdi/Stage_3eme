@@ -1,0 +1,97 @@
+html, body {
+  height:100%;
+}
+/* Container principal du formulaire */
+.form-holder {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Aligner en haut pour permettre le défilement vers le bas */
+  text-align: center;
+  padding-right: 20px;
+  margin-left: 340px;
+  overflow-y: auto; /* Activer le défilement vertical */
+  overflow-x: hidden; /* Désactiver le défilement horizontal si non nécessaire */
+  width: calc(100% - 300px);
+  box-sizing: border-box;
+}
+
+/* Utiliser une grille pour organiser les éléments du formulaire */
+.form-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+  padding: 10px;
+  width: 100%;
+  max-width: 1000px;
+  box-sizing: border-box;
+  overflow-x: auto;
+}
+
+/* Ajustement des éléments de formulaire */
+.form-content .form-items {
+  border: 3px solid black;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  transition: all 0.4s ease;
+}
+
+/* Styles pour les champs de saisie */
+.form-content input[type="text"],
+.form-content input[type="password"],
+.form-content input[type="email"],
+.form-content select,
+.form-content textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 6px;
+  background-color: whitesmoke;
+  font-size: 15px;
+  color: #8D8D8D;
+  transition: all 0.3s ease;
+  margin-top: 16px;
+}
+
+/* Styles supplémentaires pour les boutons et autres éléments */
+.btn-primary {
+  background-color: #6C757D;
+  outline: none;
+  border: 0;
+  box-shadow: none;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #495056;
+  outline: none !important;
+  border: none !important;
+  box-shadow: none;
+}
+
+/* Ajustement des éléments de la table pour qu'ils soient alignés dans la grille */
+.table-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.table-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.table {
+  display: table;
+}
+
+.tr {
+  display: table-row;
+}
+
+.td {
+  display: table-cell;
+}

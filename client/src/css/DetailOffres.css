@@ -1,0 +1,22 @@
+.icon-container {
+    display: flex; /* Utilise Flexbox pour aligner les éléments horizontalement */
+    gap: 2px; /* Espacement entre les icônes */
+  }
+.icon {
+    display: flex;
+    align-items: center;
+    margin: 30px;  /* Ajoutez une marge horizontale */
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #0ea6f8; /* Changez cette couleur selon vos besoins */
+  }
+  
+  .icon:hover {
+    color: #004a7c; /* Changez cette couleur selon vos besoins */
+  }
+  td.icon-cell {
+    display: flex;
+    align-items: center; /* Centre verticalement les icônes */
+    justify-content: flex-start; /* Aligne les icônes à gauche, vous pouvez ajuster selon vos besoins */
+    gap: 10px; /* Espace entre les icônes */
+}
